@@ -1,0 +1,85 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.logo {
+    width: 154px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.wide {
+    text-align: center; /* 텍스트-정렬 : 가운데   vs 이미지는 텍스트가 아닌데... */
+    background-color: #006FFF;
+    background-image: url("images/visual-wide.png"); /* 배경-이미지 : url(경로/이름.형식) */
+    background-repeat: no-repeat;                    /* 배경-반복 : 안함 */
+    background-position: center center;              /* 배경-위치 : (공간에서) 수평 수직 */
+}
+.menu {
+    background-color: black;   /* 메뉴 배경색 */
+}
+.menu ul {
+    list-style-type: none;  /* 목록-스타일-종류 : 없음 (사각형,채워진 원, 빈원) */
+    display: flex;    /* 표시 : 플렉스(유연한 구조?) */
+    justify-content: center; /* 컨텐츠-정렬 : 가로 가운데 */
+}
+.menu ul li, .sub_menu ul li {
+    padding: 20px 0;
+    width: 100px;
+}
+.menu a {
+    color: white;    /* 메뉴 글자색 */
+    text-decoration: none;   /* 텍스트-꾸밈: 없음 */
+}
+.sub_menu {
+    background-color: #fafafa;   /* 서브메뉴 배경색 */
+    border: 1px solid gray;
+    margin: 50px 0 0 0;   /* .casting과 .sub_menu 사이 공간 확보 */
+}
+.sub_menu ul {
+    list-style-type: none;  /* 목록-스타일-종류 : 없음 (사각형,채워진 원, 빈원) */
+    display: flex;    /* 표시 : 플렉스(유연한 구조?) */
+    justify-content: center; /* 컨텐츠-정렬 : 가로 가운데 */
+}
+.sub_menu ul li {
+    padding: 20px 0;
+}
+.sub_menu a {
+    color: #666666;    /* 메뉴 글자색 */
+    text-decoration: none;   /* 텍스트-꾸밈: 없음 */
+    font-size: 13px;
+}
+/* 입장 요금안내 표 */
+.price, .casting {
+    width: 800px;
+    margin: 0 auto;
+}
+.price th, .casting th{
+    width: 200px;
+}
+.price, .price th, .price td,.casting, .casting th, .casting td {
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+.price caption,.casting caption {
+    font-size: 18px;
+    font-weight: bolder;  /* 글자-두께 : 더 두껍게 (폰트마다 다름) */
+    margin: 30px 0 20px 0;
+}
+.price th, .price td, .casting th, .casting td  {
+    padding: 20px 0;
+    text-align: center;
+}
+.site_info {
+    background-color: black;
+    text-align: center;
+    padding: 30px 0;
+}
+.site_info p {
+    color: white;
+    margin: 20px 0;
+}
