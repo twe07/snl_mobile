@@ -13,11 +13,17 @@ body {
     margin-bottom: 50px;
 }
 .wide {
+     height: 309px;
+     position: relative;
     text-align: center; /* 텍스트-정렬 : 가운데   vs 이미지는 텍스트가 아닌데... */
     background-color: #006FFF;
     background-image: url("images/visual-wide.png"); /* 배경-이미지 : url(경로/이름.형식) */
     background-repeat: no-repeat;                    /* 배경-반복 : 안함 */
     background-position: center center;              /* 배경-위치 : (공간에서) 수평 수직 */
+}
+#model {
+    position: absolute;
+    bottom: 0;
 }
 .menu {
     background-color: black;   /* 메뉴 배경색 */
@@ -47,6 +53,7 @@ body {
 }
 .sub_menu ul li {
     padding: 20px 0;
+    margin: 0 11px;
 }
 .sub_menu a {
     color: #666666;    /* 메뉴 글자색 */
@@ -82,4 +89,37 @@ body {
 .site_info p {
     color: white;
     margin: 20px 0;
+}
+
+/*midia query*/
+@media screen and (max-width: 360px){
+    #model {
+        width: 300px;
+        left: 50%;/*왼쪽위치 : 화면의 중앙*/
+        margin-left:  -160px;/*왼쪽 여백 : 사진의 1/2 더 왼쪽으로*/
+    }
+    #model img {
+        width: 100%;
+    }
+    .menu a {
+        font-size: 16px;
+        letter-spacing: -1px;
+}
+.price, .casting {
+    width: 340px; /*총 360px에 300px 는 몇퍼센트 일까요?*/
+}
+.price th,.casting th{
+    width: 25%;
+}
+.price th, .price td, .casting th, .casting td {
+    font-size: 14px;
+    letter-spacing: -2px;
+
+    }
+    .sub_menu a {
+        color: #666666;    /* 메뉴 글자색 */
+        text-decoration: none;   /* 텍스트-꾸밈: 없음 */
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
 }
